@@ -1,0 +1,29 @@
+* create new app; initialises new app with dependencies
+    npx create-react-app taskify-ts --template typescript
+npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd taskify-ts
+  npm start
+
+* remove files not needed
+    app.test.tsx; logo.svg; reportWebVitals.ts;setupTests.ts;
+* remove references to files deleted
+* remove default styles from app.css - moves hello world from left to center
+
+what is TS? - strict type checking
+* in JS types are inferred; don't need to be declared
+* in TS need to be declared using ":" e.g. let name: string = 'Gurdeep'
+* this gives error when string variable assigned to number
