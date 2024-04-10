@@ -20,10 +20,76 @@ We suggest that you begin by typing:
 
 * remove files not needed
     app.test.tsx; logo.svg; reportWebVitals.ts;setupTests.ts;
-* remove references to files deleted
+* remove references to files deleted from app.tsx and index.tsx
+* delete function in app.tsz and rpalte with simple function
 * remove default styles from app.css - moves hello world from left to center
 
 what is TS? - strict type checking
 * in JS types are inferred; don't need to be declared
 * in TS need to be declared using ":" e.g. let name: string = 'Gurdeep'
 * this gives error when string variable assigned to number
+
+react component
+* In app.tsx change to React.FC component 
+* add styles in app.css
+
+* What is JSX - a syntax extension for JS that allows for creation of HTML like structures
+  within javascript code; commonly used in react apps
+
+
+
+// variable types in typescript
+let name: string = 'Gurdeep';
+let age: number = 43;
+let age2: number | string;
+let isStudent: boolean;
+let hobbies: string[]; // array of strings
+let hobbies2: number[]; // array or nubmers
+let role: [number, string]; // tuple - fixed number of variables and types
+
+role = [54, 'egad!'];
+age2 = 'ten';
+// objects
+let pearson: Object; // not recommended since property definition is difficult
+
+// use type keyword to declare object of type Person and then assign using let
+type Person = {
+  name: string;
+  age?: number; // makes age optional
+}
+
+// assign to variable
+let person: Person = {
+  name: 'Gurdeep',
+  age: 43,
+};
+
+// array of person object
+let lotsOfPeople: Person[];
+
+// function - declare variable type of input
+function printName(name: string) {
+  console.log(name);
+}
+
+printName('gurdeep')
+
+// inherit properties of other objects
+type X = {
+  a: string;
+  b: number;
+}
+
+// y should inherit properties of x
+type Y = X & {
+  c: string;
+  d: number;
+}
+
+// need to give all 4 variables - a,b,c,d
+let y: Y = {
+  c: 'asdf',
+  d: 33,
+  a: 'ewt',
+  b: 56,
+}
